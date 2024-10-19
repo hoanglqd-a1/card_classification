@@ -1,0 +1,76 @@
+Byte-compiled / optimized / DLL files
+pycache/
+*.py[cod]
+*.pyo
+*.pyd
+
+C extensions
+*.so
+
+Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+Logs
+logs/
+.log
+
+Virtual environment
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+Jupyter Notebook checkpoints
+.ipynbcheckpoints
+
+PyCharm project files
+.idea/
+
+VS Code settings
+.vscode/
+
+Data files and datasets
+dataset/
+pretrained/
+trainedmodel/
+
+Python cache
+__pycache/
+
+Test outputs
+test/
+test.py
+
+Environment variables
+.env
+*.env
+
+MacOS and Linux system files
+.DS_Store
+*.swp
+
+Models
+*.h5
+*.ckpt
+*.pth
+
+Others
+*.tmp
+*.bak
+*.old
