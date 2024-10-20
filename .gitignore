@@ -2,3 +2,6 @@
 /card_segmentation/dataset/
 *.pt
 /card_segmentation/__pycache__/
+
+!card_segmentation/test/
+!card_segmentation/pretrained/
