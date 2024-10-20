@@ -1,0 +1,4 @@
+matplotlib
+wget
+tensorboard
+opencv-python

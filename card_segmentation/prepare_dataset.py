@@ -11,6 +11,16 @@ from PIL import Image
 from glob import glob
 
 download_links = [
+    'ftp://smartengines.com/midv-500/dataset/01_alb_id.zip',
+    'ftp://smartengines.com/midv-500/dataset/02_aut_drvlic_new.zip',
+    'ftp://smartengines.com/midv-500/dataset/03_aut_id_old.zip',
+    'ftp://smartengines.com/midv-500/dataset/04_aut_id.zip',
+    'ftp://smartengines.com/midv-500/dataset/05_aze_passport.zip',
+    'ftp://smartengines.com/midv-500/dataset/06_bra_passport.zip',
+    'ftp://smartengines.com/midv-500/dataset/07_chl_id.zip',
+    'ftp://smartengines.com/midv-500/dataset/08_chn_homereturn.zip',
+    'ftp://smartengines.com/midv-500/dataset/09_chn_id.zip',
+    'ftp://smartengines.com/midv-500/dataset/10_cze_id.zip',
     'ftp://smartengines.com/midv-500/dataset/12_deu_drvlic_new.zip',
     'ftp://smartengines.com/midv-500/dataset/13_deu_drvlic_old.zip',
     'ftp://smartengines.com/midv-500/dataset/14_deu_id_new.zip',
@@ -19,7 +29,17 @@ download_links = [
     'ftp://smartengines.com/midv-500/dataset/17_deu_passport_old.zip',
     'ftp://smartengines.com/midv-500/dataset/18_dza_passport.zip',
     'ftp://smartengines.com/midv-500/dataset/19_esp_drvlic.zip',
-    'ftp://smartengines.com/midv-500/dataset/20_esp_id_new.zip',]
+    'ftp://smartengines.com/midv-500/dataset/20_esp_id_new.zip',
+    'ftp://smartengines.com/midv-500/dataset/21_esp_id_old.zip',
+    'ftp://smartengines.com/midv-500/dataset/22_est_id.zip',
+    'ftp://smartengines.com/midv-500/dataset/23_fin_drvlic.zip',
+    'ftp://smartengines.com/midv-500/dataset/24_fin_id.zip',
+    'ftp://smartengines.com/midv-500/dataset/25_grc_passport.zip',
+    'ftp://smartengines.com/midv-500/dataset/26_hrv_drvlic.zip',
+    'ftp://smartengines.com/midv-500/dataset/27_hrv_passport.zip',
+    'ftp://smartengines.com/midv-500/dataset/28_hun_passport.zip',
+    'ftp://smartengines.com/midv-500/dataset/29_irn_drvlic.zip',
+    'ftp://smartengines.com/midv-500/dataset/30_ita_drvlic.zip',]
 
 '''
 download_links = ['ftp://smartengines.com/midv-500/dataset/01_alb_id.zip',
@@ -146,10 +166,10 @@ def download_and_unzip():
             label_list = sorted(glob(gt_dir_path + ground_truth + '/*.json'))
             for img, label in zip(img_list, label_list):
                 cnt+= 1
-                if cnt % 6 != 0:
+                if cnt % 2 != 0:
                     continue
                 image, mask = read_image(img, label)
-                file_idx = cnt // 6
+                file_idx = cnt // 2
                 cv2.imwrite(TEMP_IMAGE_PATH + 'image' + str(file_idx) + '.png', image)
                 cv2.imwrite(TEMP_MASK_PATH + 'image' + str(file_idx) + '.png', mask)
 

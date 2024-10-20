@@ -26,7 +26,6 @@ conda activate card_classification
 
 Tải các thư viện liên quan
 ```
-cd card_segmentation
 pip install -r requirements.txt
 ```
 ## Tải dataset
@@ -40,11 +39,6 @@ python prepare_dataset.py
 
 ```
 python train.py
-```
-
-Nếu muốn train tiếp từ mô hình đã lưu (pretrained/model_checkpoint.pt)
-```
-python train.py --resumeTraining=True
 ```
 
 ## Thử nghiệm

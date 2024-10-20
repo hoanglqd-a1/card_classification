@@ -20,7 +20,7 @@ from utils.metrics import multi_acc, iou_score
 
 NO_OF_EPOCHS = 500
 BATCH_SIZE = 24
-IMAGE_SIZE = (256, 256)
+IMAGE_SIZE = (64, 64)
 
 SEED = 50
 

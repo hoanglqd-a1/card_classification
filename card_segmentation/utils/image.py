@@ -19,7 +19,7 @@ def load_image(input_file):
     width, height = image.size
 
     # resize for inference
-    image = image.resize((256, 256))
+    image = image.resize((64, 64))
     img_nd = np.array(image)
 
     # expand grayscale image to 3 dimensions
@@ -31,7 +31,7 @@ def load_image(input_file):
     img_trans = img_trans / 255
 
     # reshape to 1-batched tensor
-    img_trans = img_trans.reshape(1, 1, 256, 256)
+    img_trans = img_trans.reshape(1, 1, 64, 64)
 
     return torch.from_numpy(img_trans).type(torch.FloatTensor), height, width
 
