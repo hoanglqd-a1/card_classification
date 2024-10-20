@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ## Tải dataset
 Có thể bỏ qua bước này nếu không muốn train mô hình
 
-Tạo folder card_segmentation/dataset
+- Tạo folder card_segmentation/dataset
 
 ```
 cd card_segmentation
